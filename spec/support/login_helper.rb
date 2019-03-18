@@ -6,7 +6,7 @@ module LoginHelper
     fill_in("user[happiness]", :with => "3")
     fill_in("user[nausea]", :with => "2")
     fill_in("user[tickets]", :with => "15")
-    fill_in("user[password]", :with => "password")
+    fill_in("user_password", :with => "password")
     click_button('Create User')
   end
 
@@ -29,7 +29,7 @@ module LoginHelper
     click_button('Sign In')
   end
 
-  def create_standard_user 
+  def create_standard_user
     @mindy = User.create(
       name: "Mindy",
       password: "password",
@@ -55,5 +55,5 @@ module LoginHelper
       admin: true
     )
   end
-  
+
 end
